@@ -5,7 +5,7 @@
   var FONT =
     '"Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Heiti SC", "Source Han Sans SC", sans-serif';
 
-  var START_METERS = { energy: 68, mood: 52, salary: 54 };
+  var START_METERS = { energy: 50, mood: 52, salary: 54 };
 
   var STICKER_FILES = {
     "01": "assets/stickers/f01.png",
@@ -40,9 +40,9 @@
           title: "早高峰",
           body: "地铁门一开，方仔被轻轻拥进了车厢。今天的站姿是「人贴人特别版」，扶手只是传说。",
           options: [
-            { text: "戴上耳机，进入结界，谁也进不来", d: { energy: -4, mood: 8, salary: 0 }, tags: ["slack"] },
-            { text: "闭眼补觉，在下一站被广播吓醒", d: { energy: 10, mood: -4, salary: 0 }, tags: [] },
-            { text: "给旁边挤出半个脚的空间，自己再贴紧点", d: { energy: -10, mood: 6, salary: 0 }, tags: [] }
+            { text: "买了杯热饮，戴上耳机进入结界", d: { energy: -2, mood: 8, salary: -12 }, tags: ["slack", "spend"] },
+            { text: "闭眼补觉，在下一站被广播吓醒", d: { energy: 10, mood: -12, salary: 0 }, tags: [] },
+            { text: "给旁边挤出半个脚的空间，自己再贴紧点", d: { energy: -12, mood: 4, salary: 0 }, tags: [] }
           ]
         },
         {
@@ -51,9 +51,9 @@
           title: "早高峰",
           body: "公交晚点了八分钟，站台风有点大。方仔看了眼时间，又看了眼远处缓缓移动的红灯。",
           options: [
-            { text: "改骑共享单车，风里冲一把", d: { energy: -10, mood: 4, salary: -2 }, tags: ["grind"] },
-            { text: "继续等，边刷短视频边跺脚取暖", d: { energy: -2, mood: 6, salary: 0 }, tags: ["slack"] },
-            { text: "打车垫上，把时间买回来", d: { energy: 6, mood: 6, salary: -16 }, tags: ["spend"] }
+            { text: "改骑共享单车，风里冲一把", d: { energy: -12, mood: 2, salary: -2 }, tags: ["grind"] },
+            { text: "继续等，边刷短视频边跺脚取暖", d: { energy: -2, mood: -12, salary: 0 }, tags: ["slack"] },
+            { text: "打车垫上，把时间买回来", d: { energy: 6, mood: 6, salary: -18 }, tags: ["spend"] }
           ]
         }
       ]
@@ -70,8 +70,8 @@
           title: "早会",
           body: "早会号称十五分钟。十五分钟后，还在同步「再补充两点」。方仔的膝盖已经开始想念椅子。",
           options: [
-            { text: "认真记笔记，还画了几个箭头", d: { energy: -8, mood: -4, salary: 4 }, tags: ["grind"] },
-            { text: "点头如捣蒜，大脑暂时去放空", d: { energy: 2, mood: 6, salary: -2 }, tags: ["slack"] },
+            { text: "认真记笔记，还画了几个箭头", d: { energy: -8, mood: -14, salary: 4 }, tags: ["grind"] },
+            { text: "点头如捣蒜，大脑暂时去放空", d: { energy: 2, mood: 6, salary: -8 }, tags: ["slack"] },
             { text: "申请去倒杯水，顺便让膝盖透透气", d: { energy: 4, mood: 4, salary: 0 }, tags: ["break"] }
           ]
         },
@@ -81,8 +81,8 @@
           title: "周会",
           body: "周会开始两分钟，投影仪准时罢工。会议室陷入了「有人会修吗」的集体沉默。",
           options: [
-            { text: "默默去插线，当了编外 IT", d: { energy: -8, mood: 2, salary: 2 }, tags: ["grind"] },
-            { text: "趁乱在聊天框里发了个表情包", d: { energy: 0, mood: 8, salary: -2 }, tags: ["slack"] },
+            { text: "默默去插线，当了编外 IT", d: { energy: -8, mood: -14, salary: 2 }, tags: ["grind"] },
+            { text: "趁乱在聊天框里发了个表情包", d: { energy: 0, mood: 8, salary: -8 }, tags: ["slack"] },
             { text: "建议改成口头同步，五分钟结束", d: { energy: 6, mood: 6, salary: 2 }, tags: [] }
           ]
         }
@@ -100,9 +100,9 @@
           title: "临时需求",
           body: "老板甩来一句「这个很急，今天要」。附件还在路上，截止时间已经坐在桌子上了。",
           options: [
-            { text: "立刻上手，午饭往后挪", d: { energy: -14, mood: -12, salary: 10 }, tags: ["grind"] },
-            { text: "先问清范围和真正的截止时间", d: { energy: -6, mood: 2, salary: 6 }, tags: [] },
-            { text: "回「我先看看」，然后去倒了杯水", d: { energy: 4, mood: 6, salary: -4 }, tags: ["slack", "break"] }
+            { text: "立刻上手，午饭往后挪", d: { energy: -16, mood: -6, salary: 10 }, tags: ["grind"] },
+            { text: "先问清范围和真正的截止时间", d: { energy: -4, mood: -14, salary: 4 }, tags: [] },
+            { text: "回「我先看看」，然后去倒了杯水", d: { energy: 4, mood: 6, salary: -12 }, tags: ["slack", "break"] }
           ]
         },
         {
@@ -111,9 +111,9 @@
           title: "系统告急",
           body: "系统先罢工了，群里开始@所有人。方仔的屏幕还停在转圈，消息已经堆成了楼梯。",
           options: [
-            { text: "先截图，证明卡在加载画面上", d: { energy: -2, mood: 4, salary: 0 }, tags: ["slack"] },
-            { text: "主动帮忙排查，当救火队员", d: { energy: -10, mood: -6, salary: 8 }, tags: ["grind"] },
-            { text: "正好去茶水间躲一会儿", d: { energy: 6, mood: 8, salary: -8 }, tags: ["slack", "break"] }
+            { text: "先截图，证明卡在加载画面上", d: { energy: -2, mood: -14, salary: 0 }, tags: ["slack"] },
+            { text: "主动帮忙排查，当救火队员", d: { energy: -14, mood: -6, salary: 8 }, tags: ["grind"] },
+            { text: "正好去茶水间躲一会儿", d: { energy: 6, mood: 8, salary: -14 }, tags: ["slack", "break"] }
           ]
         }
       ]
@@ -130,9 +130,9 @@
           title: "午饭时间",
           body: "食堂今日推荐是「微辣」。方仔夹起第一筷，意识到微辣和勇敢之间，隔着一个胃。",
           options: [
-            { text: "还是吃完，给自己一点英雄剧情", d: { energy: -4, mood: 4, salary: 2 }, tags: [] },
-            { text: "转向窗外那家面馆，细水长流", d: { energy: 6, mood: 10, salary: -12 }, tags: ["spend"] },
-            { text: "抽屉里还有昨天的饼干，先垫垫", d: { energy: -2, mood: -10, salary: 4 }, tags: [] }
+            { text: "还是吃完，给自己一点英雄剧情", d: { energy: -8, mood: 4, salary: 2 }, tags: [] },
+            { text: "转向窗外那家面馆，细水长流", d: { energy: 6, mood: 10, salary: -16 }, tags: ["spend"] },
+            { text: "抽屉里还有昨天的饼干，先垫垫", d: { energy: -2, mood: -14, salary: 4 }, tags: [] }
           ]
         },
         {
@@ -141,8 +141,8 @@
           title: "午饭时间",
           body: "同事发起点外卖，对话框停在「你想吃什么」已经三分钟。菜单在滚动，决定还没有来。",
           options: [
-            { text: "甩出两家收藏店，迅速收束", d: { energy: 4, mood: 6, salary: -10 }, tags: ["spend"] },
-            { text: "说「我都好」，然后开始温和否决", d: { energy: -4, mood: -6, salary: 0 }, tags: [] },
+            { text: "甩出两家收藏店，迅速收束", d: { energy: 4, mood: 6, salary: -16 }, tags: ["spend"] },
+            { text: "说「我都好」，然后开始温和否决", d: { energy: -4, mood: -14, salary: 0 }, tags: [] },
             { text: "自己带了便当，安静去加热", d: { energy: 4, mood: 4, salary: 6 }, tags: [] }
           ]
         }
@@ -160,9 +160,9 @@
           title: "下午三点",
           body: "下午三点，眼皮开始和屏幕比赛谁先倒下。表格还在，意志已经去茶水间排队了。",
           options: [
-            { text: "去茶水间续命，顺便听两句八卦", d: { energy: 8, mood: 8, salary: -2 }, tags: ["break"] },
-            { text: "冷水洗把脸，继续把表填完", d: { energy: -8, mood: -4, salary: 6 }, tags: ["grind"] },
-            { text: "打开一张很忙的表，开始神游", d: { energy: 6, mood: 10, salary: -4 }, tags: ["slack"] }
+            { text: "去茶水间续命，顺便听两句八卦", d: { energy: 8, mood: 8, salary: -4 }, tags: ["break"] },
+            { text: "冷水洗把脸，继续把表填完", d: { energy: -14, mood: -6, salary: 6 }, tags: ["grind"] },
+            { text: "打开一张很忙的表，开始神游", d: { energy: 6, mood: 10, salary: -8 }, tags: ["slack"] }
           ]
         },
         {
@@ -171,9 +171,9 @@
           title: "下午茶出现了",
           body: "茶水间突然出现了一盒饼干，像是某种集体信号。方仔站在门口，进行了三秒钟的思想斗争。",
           options: [
-            { text: "拿两块，顺便社交两句", d: { energy: 4, mood: 8, salary: 0 }, tags: ["break"] },
+            { text: "拿块饼干，又顺手买了瓶饮料", d: { energy: 4, mood: 8, salary: -12 }, tags: ["break", "spend"] },
             { text: "默默拿一块就走，生怕被拉进长聊", d: { energy: 2, mood: 2, salary: 0 }, tags: [] },
-            { text: "「我在赶东西」，眼神坚定地路过", d: { energy: -4, mood: -2, salary: 4 }, tags: ["grind"] }
+            { text: "「我在赶东西」，眼神坚定地路过", d: { energy: -4, mood: -12, salary: 4 }, tags: ["grind"] }
           ]
         }
       ]
@@ -190,9 +190,9 @@
           title: "锅来了",
           body: "群里有人把一句话写得很委婉：是不是可以请方仔再看一眼？锅盖掀开一条缝，热气已经过来了。",
           options: [
-            { text: "列出时间线和截图，把事实摆好", d: { energy: -8, mood: -4, salary: 6 }, tags: ["grind"] },
+            { text: "列出时间线和截图，把事实摆好", d: { energy: -12, mood: -6, salary: 6 }, tags: ["grind"] },
             { text: "先去走廊里走两分钟，回来再回复", d: { energy: 2, mood: 4, salary: 0 }, tags: ["break"] },
-            { text: "回一个「收到」，先把这轮浪避过去", d: { energy: 2, mood: 6, salary: -10 }, tags: ["slack"] }
+            { text: "回一个「收到」，先把这轮浪避过去", d: { energy: 2, mood: 6, salary: -14 }, tags: ["slack"] }
           ]
         },
         {
@@ -201,9 +201,9 @@
           title: "跨组来催",
           body: "跨组消息跳出来：「那个数据昨天就该有了吧？」方仔翻了翻记录，需求是今天早上才发的。",
           options: [
-            { text: "今晚整理好再发，先把火灭掉", d: { energy: -12, mood: -10, salary: 8 }, tags: ["grind"] },
-            { text: "说明时点，给一个可先用的大致范围", d: { energy: -4, mood: 2, salary: 4 }, tags: [] },
-            { text: "回「我去翻翻」，然后去茶水间站一会儿", d: { energy: 4, mood: 4, salary: -8 }, tags: ["slack", "break"] }
+            { text: "今晚整理好再发，先把火灭掉", d: { energy: -16, mood: -6, salary: 8 }, tags: ["grind"] },
+            { text: "说明时点，给一个可先用的大致范围", d: { energy: -2, mood: -14, salary: 4 }, tags: [] },
+            { text: "回「我去翻翻」，然后去茶水间站一会儿", d: { energy: 4, mood: 4, salary: -14 }, tags: ["slack", "break"] }
           ]
         }
       ]
@@ -220,9 +220,9 @@
           title: "加班邀请",
           body: "组长在群里问：今晚谁还方便再看一眼？消息下面安静了四秒，像是集体在等别人先说话。",
           options: [
-            { text: "「没问题，我再留一会儿。」", d: { energy: -16, mood: -12, salary: 12 }, tags: ["grind"] },
-            { text: "「今天有事先走，明早第一件事处理。」", d: { energy: 8, mood: 8, salary: -4 }, tags: ["punctual"] },
-            { text: "「我回家看一下」，把电脑装进包里", d: { energy: -8, mood: -4, salary: 4 }, tags: ["grind"] }
+            { text: "「没问题，我再留一会儿。」", d: { energy: -16, mood: -6, salary: 12 }, tags: ["grind"] },
+            { text: "「今天有事先走，明早第一件事处理。」", d: { energy: 8, mood: 8, salary: -10 }, tags: ["punctual"] },
+            { text: "「我回家看一下」，把电脑装进包里", d: { energy: -4, mood: -14, salary: 4 }, tags: ["grind"] }
           ]
         },
         {
@@ -231,9 +231,9 @@
           title: "今晚要守着吗",
           body: "临时出了个小问题，有人说「今晚最好守一下」。方仔看了眼已经暗下来的窗外，又看了眼右下角的时钟。",
           options: [
-            { text: "留下守着，把这摊先收住", d: { energy: -16, mood: -12, salary: 10 }, tags: ["grind"] },
-            { text: "写好交接，说明明早可以接上", d: { energy: 4, mood: 6, salary: 2 }, tags: ["punctual"] },
-            { text: "先问清楚：是守着，还是处理完就能走", d: { energy: -6, mood: 2, salary: 4 }, tags: [] }
+            { text: "留下守着，把这摊先收住", d: { energy: -16, mood: -6, salary: 10 }, tags: ["grind"] },
+            { text: "写好交接，说明明早可以接上", d: { energy: 4, mood: 6, salary: -10 }, tags: ["punctual"] },
+            { text: "先问清楚：是守着，还是处理完就能走", d: { energy: -2, mood: -14, salary: 2 }, tags: [] }
           ]
         }
       ]
@@ -250,8 +250,8 @@
           title: "下班前五分钟",
           body: "电脑右下角跳出一个红色会议邀请，时间是「现在」。方仔的手指停在触控板上，背包已经站了起来。",
           options: [
-            { text: "已读不回，拉链拉得很坚定", d: { energy: 6, mood: 10, salary: -4 }, tags: ["punctual"] },
-            { text: "还是点进去，再听十分钟", d: { energy: -8, mood: -10, salary: 6 }, tags: ["grind"] },
+            { text: "已读不回，拉链拉得很坚定", d: { energy: 6, mood: 10, salary: -10 }, tags: ["punctual"] },
+            { text: "还是点进去，再听十分钟", d: { energy: -6, mood: -14, salary: 6 }, tags: ["grind"] },
             { text: "回「我在路上」，边走边听", d: { energy: -2, mood: 2, salary: 2 }, tags: [] }
           ]
         },
@@ -261,8 +261,8 @@
           title: "下班前五分钟",
           body: "有人在文档下面说：「再改一版吧，很快的。」时钟离整点还差五分钟，方仔的鼠标悬在关机键上。",
           options: [
-            { text: "「明天第一件事」，然后关机", d: { energy: 6, mood: 8, salary: 0 }, tags: ["punctual"] },
-            { text: "留下改到自己满意", d: { energy: -12, mood: -8, salary: 8 }, tags: ["grind"] },
+            { text: "「明天第一件事」，然后关机", d: { energy: 6, mood: 8, salary: -8 }, tags: ["punctual"] },
+            { text: "留下改到自己满意", d: { energy: -8, mood: -14, salary: 8 }, tags: ["grind"] },
             { text: "先保存，把问题记在便签上带走", d: { energy: -2, mood: 4, salary: 2 }, tags: [] }
           ]
         }
@@ -291,9 +291,9 @@
     },
     paidBreak: {
       id: "paidBreak",
-      title: "带薪拉屎冠军",
+      title: "带薪发呆冠军",
       sticker: "24",
-      text: "茶水间去了两趟，隔间里完成了今日最清晰的思考。效率高得不便写进日报，但心情确实回来了。"
+      text: "茶水间去了两趟，靠窗发了会儿呆，完成了今日最清晰的思考。效率高得不便写进日报，但心情确实回来了。"
     },
     lively: {
       id: "lively",
